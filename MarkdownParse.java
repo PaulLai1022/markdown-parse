@@ -44,7 +44,9 @@ public class MarkdownParse {
                 }
                 endIndex++;
             }
-            toReturn.add(markdown.substring(startIndex, endIndex + 1));
+            toReturn.add(markdown.substring(startIndex, endIndex));
+
+            
         }
         return toReturn;
     }

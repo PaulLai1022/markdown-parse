@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class MarkdownParseTest {
-    @Test
+    @Test 
     public void testDefaultLinkMethod() throws IOException {
         Path fileName = Path.of("test-file.md");
         String contents = Files.readString(fileName);
@@ -74,5 +74,11 @@ public class MarkdownParseTest {
         Path fileName = Path.of(filePath);
         String contents = Files.readString(fileName);
         return contents;
+    }
+
+    @Test
+    public void joesNewTestNine() throws IOException {
+        assertEquals(List.of("something.com"), 
+            MarkdownParse.getLinks(getContents("test-file9.md")));
     }
 }
